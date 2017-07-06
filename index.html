@@ -29,6 +29,12 @@ var valueline = d3.line()
 var valueline2 = d3.line()
     .x(function(d) { return x(d.Year); })
     .y(function(d) { return y(d.Allegheny_Medicaid); });
+var valueline3 = d3.line()
+    .x(function(d) { return x(d.Year); })
+    .y(function(d) { return y(d.State_Priv); });
+var valueline4 = d3.line()
+    .x(function(d) { return x(d.Year); })
+    .y(function(d) { return y(d.State_Medicaid); });
 // append the svg obgect to the body of the page
 // appends a 'group' element to 'svg'
 // moves the 'group' element to the top left margin
@@ -46,11 +52,13 @@ d3.csv("data.csv", function(error, data) {
       d.Year = parseTime(d.Year);
       d.Allegheny_Priv = +d.Allegheny_Priv;
       d.Allegheny_Medicaid = +d.Allegheny_Medicaid;
+      d.State_Priv = +d.State_Priv;
+      d.State_Medicaid = +d.State_Medicaid;
   });
   // Scale the range of the data
   x.domain(d3.extent(data, function(d) { return d.Year; }));
   y.domain([0, d3.max(data, function(d) {
-	  return Math.max(d.Allegheny_Priv, d.Allegheny_Medicaid); })]);
+	  return Math.max(d.Allegheny_Priv, d.Allegheny_Medicaid, d.State_Priv, d.State_Medicaid); })]);
   // Add the valueline path.
   svg.append("path")
       .data([data])
@@ -62,7 +70,17 @@ d3.csv("data.csv", function(error, data) {
       .attr("class", "line")
       .style("stroke", "red")
       .attr("d", valueline2);
-  // Add the X Axis
+  svg.append("path")
+      .data([data])
+      .attr("class", "line")
+      .style("stroke", "green")
+      .attr("d", valueline3);
+svg.append("path")
+      .data([data])
+      .attr("class", "line")
+      .style("stroke", "purple")
+      .attr("d", valueline2);
+// Add the X Axis
   svg.append("g")
       .attr("transform", "translate(0," + height + ")")
       .call(d3.axisBottom(x));
