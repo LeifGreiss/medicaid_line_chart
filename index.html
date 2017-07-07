@@ -24,17 +24,17 @@ var y = d3.scaleLinear().range([height, 0]);
 // define the 1st line
 var valueline = d3.line()
     .x(function(d) { return x(d.Year); })
-    .y(function(d) { return y(d.Allegheny_Priv); });
-// define the 2nd line
+    .y(function(d) { return y(d.State_Priv); });
 var valueline2 = d3.line()
     .x(function(d) { return x(d.Year); })
-    .y(function(d) { return y(d.Allegheny_Medicaid); });
+    .y(function(d) { return y(d.State_Medicaid); });
 var valueline3 = d3.line()
     .x(function(d) { return x(d.Year); })
-    .y(function(d) { return y(d.State_Priv); });
+    .y(function(d) { return y(d.Allegheny_Priv); });
+// define the 2nd line
 var valueline4 = d3.line()
     .x(function(d) { return x(d.Year); })
-    .y(function(d) { return y(d.State_Medicaid); });
+    .y(function(d) { return y(d.Allegheny_Medicaid); });
 var valueline5 = d3.line()
     .x(function(d) { return x(d.Year); })
     .y(function(d) { return y(d.Armstrong_Priv); });
@@ -87,52 +87,53 @@ d3.csv("data.csv", function(error, data) {
   svg.append("path")
       .data([data])
       .attr("class", "line")
+      .style("stroke", "003C60")
       .attr("d", valueline);
   // Add the valueline2 path.
   svg.append("path")
       .data([data])
       .attr("class", "line")
-      .style("stroke", "red")
+      .style("stroke", "0088CA")
       .attr("d", valueline2);
   svg.append("path")
       .data([data])
       .attr("class", "line")
-      .style("stroke", "green")
+      .style("stroke", "540000")
       .attr("d", valueline3);
 svg.append("path")
       .data([data])
       .attr("class", "line")
-      .style("stroke", "purple")
+      .style("stroke", "B11116")
       .attr("d", valueline4);
 svg.append("path")
       .data([data])
       .attr("class", "line")
-      .style("stroke", "orange")
+      .style("stroke", "339933")
       .attr("d", valueline5);
 svg.append("path")
       .data([data])
       .attr("class", "line")
-      .style("stroke", "yellow")
+      .style("stroke", "99CC66")
       .attr("d", valueline6);
 svg.append("path")
       .data([data])
       .attr("class", "line")
-      .style("stroke", "pink")
+      .style("stroke", "23676D")
       .attr("d", valueline7);
 svg.append("path")
       .data([data])
       .attr("class", "line")
-      .style("stroke", "grey")
+      .style("stroke", "91BABF")
       .attr("d", valueline8);
 svg.append("path")
       .data([data])
       .attr("class", "line")
-      .style("stroke", "brown")
+      .style("stroke", "3B185A")
       .attr("d", valueline9);
 svg.append("path")
       .data([data])
       .attr("class", "line")
-      .style("stroke", "#adff2f")
+      .style("stroke", "936C98")
       .attr("d", valueline10);
 // Add the X Axis
   svg.append("g")
