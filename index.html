@@ -35,6 +35,24 @@ var valueline3 = d3.line()
 var valueline4 = d3.line()
     .x(function(d) { return x(d.Year); })
     .y(function(d) { return y(d.State_Medicaid); });
+var valueline5 = d3.line()
+    .x(function(d) { return x(d.Year); })
+    .y(function(d) { return y(d.Armstrong_Priv); });
+var valueline6 = d3.line()
+    .x(function(d) { return x(d.Year); })
+    .y(function(d) { return y(d.Armstrong_Medicaid); });
+var valueline7 = d3.line()
+    .x(function(d) { return x(d.Year); })
+    .y(function(d) { return y(d.Butler_Priv); });
+var valueline8 = d3.line()
+    .x(function(d) { return x(d.Year); })
+    .y(function(d) { return y(d.Butler_Medicaid; });
+var valueline9 = d3.line()
+    .x(function(d) { return x(d.Year); })
+    .y(function(d) { return y(d.Westmoreland_Priv); });
+var valueline10 = d3.line()
+    .x(function(d) { return x(d.Year); })
+    .y(function(d) { return y(d.Westmoreland_Medicaid); });
 // append the svg obgect to the body of the page
 // appends a 'group' element to 'svg'
 // moves the 'group' element to the top left margin
@@ -49,16 +67,22 @@ d3.csv("data.csv", function(error, data) {
   if (error) throw error;
   // format the data
   data.forEach(function(d) {
-      d.Year = parseTime(d.Year);
-      d.Allegheny_Priv = +d.Allegheny_Priv;
-      d.Allegheny_Medicaid = +d.Allegheny_Medicaid;
-      d.State_Priv = +d.State_Priv;
-      d.State_Medicaid = +d.State_Medicaid;
+ 	d.Year = parseTime(d.Year);
+ 	d.Allegheny_Priv = +d.Allegheny_Priv;
+      	d.Allegheny_Medicaid = +d.Allegheny_Medicaid;
+ 	d.State_Priv = +d.State_Priv;
+      	d.State_Medicaid = +d.State_Medicaid;
+     	d.Armstrong_Priv = +d.Armstrong_Priv;
+	d.Armstrong_Medicaid = +d.Armstrong_Medicaid;
+	d.Butler_Priv = +d.Butler_Priv;
+	d.Butler_Medicaid = +d.Butler_Medicaid;
+	d.Westmoreland_Priv = +d.Westmoreland_Priv;
+	d.Westmoreland_Medicaid = +d.Westmoreland_Medicaid;
   });
   // Scale the range of the data
   x.domain(d3.extent(data, function(d) { return d.Year; }));
   y.domain([0, d3.max(data, function(d) {
-	  return Math.max(d.Allegheny_Priv, d.Allegheny_Medicaid, d.State_Priv, d.State_Medicaid); })]);
+	  return Math.max(d.Allegheny_Priv, d.Allegheny_Medicaid, d.State_Priv, d.State_Medicaid, d.Armstrong_Priv, d.Armstrong_Medicaid, d.Butler_Priv, d.Butler_Medicaid, d.Westmoreland_Priv, d.Westmoreland_Medicaid); })]);
   // Add the valueline path.
   svg.append("path")
       .data([data])
