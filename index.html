@@ -89,7 +89,7 @@ d3.csv("data.csv", function(error, data) {
       .attr("class", "line")
       .attr("strokewidth", 1.4)
       .style("stroke", "003C60")
-      .attr("d", valueline);
+      .attr("d", valueline)
       .on("mouseover", function(){
 				console.log("in");
 			d3.select(this).attr("stroke-width", 2.2);})
