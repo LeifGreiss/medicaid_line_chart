@@ -95,7 +95,7 @@ d3.csv("data.csv", function(error, data) {
 			d3.select(this).attr("stroke-width", 2.2);})
 			.on("mouseout", function(){
 				console.log("out");
-			d3.select(this).attr("stroke-width", 1.4);})
+			d3.select(this).attr("stroke-width", 1.4);});
   // Add the valueline2 path.
   svg.append("path")
       .data([data])
