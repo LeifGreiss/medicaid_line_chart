@@ -7,12 +7,23 @@
   stroke-width: 2px;
 }
 </style>
+<head>
+<link rel="stylesheet"  href="index.css">
+<style type="text/css"></style>
+</head>
 <body>
 <h3>Nursing Facilities: Median Per Day Charges for a Private Room Vs. Median Medicaid Reimbursement Rates</h3>
 <div id="legend">
-	   <div class="legend"> <p class="country-name"><span class="key-dot queens"></span>Queens</p> </div>
-	   <div class="legend"> <p class="country-name"><span class="key-dot kings"></span>Kings</p> </div>
-	   <div class="legend"> <p class="country-name"><span class="key-dot bronx"></span>Bronx</p> </div>
+	   <div class="legend"> <p class="country-name"><span class="key-dot SC"></span>PA Median Per Day Charge</p> </div>
+	   <div class="legend"> <p class="country-name"><span class="key-dot SM"></span>PA Median Per Day Medicaid Reimbursement</p></div>
+	   <div class="legend"> <p class="country-name"><span class="key-dot AC"></span>Allegheny Per Day Charge</p></div>
+	   <div class="legend"> <p class="country-name"><span class="key-dot AM"></span>Allegheny Per Day Medicaid Reimbursement</p></div>
+	   <div class="legend"> <p class="country-name"><span class="key-dot ARC"></span>Armstrong Per Day Charge</p></div>
+	   <div class="legend"> <p class="country-name"><span class="key-dot ARM"></span>Armstrong Per Day Medicaid Reimbursement</p></div>
+	   <div class="legend"> <p class="country-name"><span class="key-dot BC"></span>Butler Per Day Charge</p></div>
+	   <div class="legend"> <p class="country-name"><span class="key-dot BM"></span>Butler Per Day Medicaid Reimnbursement</p></div>
+	   <div class="legend"> <p class="country-name"><span class="key-dot WC"></span>Westmoreland Per Day Charge</p></div>
+	   <div class="legend"> <p class="country-name"><span class="key-dot WM"></span>Westmoreland Per Day Medicaid Reimnbursement</p></div>
 	</div>
 <script src="https://d3js.org/d3.v4.min.js"></script>
 <script>
@@ -112,7 +123,6 @@ d3.csv("data.csv", function(error, data) {
       .attr("class", "line")
       .attr("strokewidth", 1.4)
       .style("stroke", "9b111e")
-      //.style("stroke", "540000")
       .attr("d", valueline3);
 svg.append("path")
       .data([data])
@@ -131,7 +141,6 @@ svg.append("path")
       .attr("class", "line")
       .attr("strokewidth", 1.4)
       .style("stroke","#99ff99")
-      //.style("stroke", "99CC66")
       .attr("d", valueline6);
 svg.append("path")
       .data([data])
