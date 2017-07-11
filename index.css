@@ -1,4 +1,4 @@
-.ketdot{
+.key-dot{
 display: inline-block;
     height: 10px;
     margin-right: .5em;
@@ -11,24 +11,24 @@ display: inline-block;
     float:left;
     margin-right: 1em;
 }
-.SC{ background: 003C60;
+.SC{ background: #003C60;
 }
-.SM{ background: 0088CA;
+.SM{ background: #0088CA;
 }
-.AC{ background: 9b111e;
+.AC{ background: #9b111e;
 }
-.AM{ background: B11116;
+.AM{ background: #B11116;
 }
-.ARC{ background: 339933;
+.ARC{ background: #339933;
 }
 .ARM{ background: #99ff99;
 }
 .BC{ background: #008080;
 }
-.BM{ background: 91BABF;
+.BM{ background: #91BABF;
 }
 .WC{ background: #663399;
 }
-.WM{ background: 936C98;
+.WM{ background: #936C98;
 }
 
