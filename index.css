@@ -32,3 +32,9 @@ display: inline-block;
 }
 .WM{ background: 936C98;
 }
+
+.line {
+  fill: none;
+  stroke: steelblue;
+  stroke-width: 2.5px;
+}
