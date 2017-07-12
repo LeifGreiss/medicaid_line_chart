@@ -21,9 +21,9 @@ display: inline-block;
     padding-right: 10px;*/
 }
 .legend{
-    float: right;
-    /*margin-right: 20px;
-    position: relative;*/
+    float: left;
+    /*margin-right: 20px;*/
+    position: fixed;
     z-index: -1;
 }
 .SC{ background: #003C60;
