@@ -22,6 +22,7 @@ display: inline-block;
 }
 .legend{
     float: left;
+    display: inline-block;
     /*margin-right: 20px;*/
     position: relative;
     z-index: -1;
