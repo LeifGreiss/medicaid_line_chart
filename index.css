@@ -4,6 +4,9 @@ display: inline-block;
     margin-right: .5em;
     width: 10px;
 }
+.county-name{
+    margin: 0 !important;
+}
 #Container{
     width: auto;
     position: relative;
@@ -13,12 +16,8 @@ display: inline-block;
     width: 650;
     height: 500;
 }
-#legend{
-    overflow:hidden;
-}
 .legend{
-    float:right;
-    margin-right: 1em;
+    margin-right: 20px;
 }
 .SC{ background: #003C60;
 }
