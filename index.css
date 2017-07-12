@@ -11,7 +11,7 @@ display: inline-block;
     width: auto;
     position: relative;
 }
-.chart{
+#chart{
    float: left;
     /*width: 650;
     height: 500;
