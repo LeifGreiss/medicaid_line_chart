@@ -13,19 +13,7 @@
 </head>
 <body>
 <h3>Nursing Facilities: Median Per Day Charges for a Private Room Vs. Median Medicaid Reimbursement Rates</h3>
- <div id="Container">
-	<div id="legend">
-	   <div class="legend"> <p class="country-name"><span class="key-dot SC"></span>PA Median Per Day Charge</p> </div>
-	   <div class="legend"> <p class="country-name"><span class="key-dot SM"></span>PA Median Per Day Medicaid Reimbursement</p></div>
-	   <div class="legend"> <p class="country-name"><span class="key-dot AC"></span>Allegheny Per Day Charge</p></div>
-	   <div class="legend"> <p class="country-name"><span class="key-dot AM"></span>Allegheny Per Day Medicaid Reimbursement</p></div>
-	   <div class="legend"> <p class="country-name"><span class="key-dot ARC"></span>Armstrong Per Day Charge</p></div>
-	   <div class="legend"> <p class="country-name"><span class="key-dot ARM"></span>Armstrong Per Day Medicaid Reimbursement</p></div>
-	   <div class="legend"> <p class="country-name"><span class="key-dot BC"></span>Butler Per Day Charge</p></div>
-	   <div class="legend"> <p class="country-name"><span class="key-dot BM"></span>Butler Per Day Medicaid Reimnbursement</p></div>
-	   <div class="legend"> <p class="country-name"><span class="key-dot WC"></span>Westmoreland Per Day Charge</p></div>
-	   <div class="legend"> <p class="country-name"><span class="key-dot WM"></span>Westmoreland Per Day Medicaid Reimnbursement</p></div>
-	</div>
+<div id="Container">
 <script src="https://d3js.org/d3.v4.min.js"></script>
 <div class="chart">
 <script>
@@ -106,13 +94,7 @@ d3.csv("data.csv", function(error, data) {
       .attr("class", "line")
       .attr("strokewidth", 1.4)
       .style("stroke", "003C60")
-      .attr("d", valueline)
-      .on("mouseover", function(){
-				console.log("in");
-			d3.select(this).attr("stroke-width", 10.2);})
-			.on("mouseout", function(){
-				console.log("out");
-			d3.select(this).attr("stroke-width", 1.4);});
+      .attr("d", valueline);
   // Add the valueline2 path.
   svg.append("path")
       .data([data])
@@ -191,6 +173,17 @@ svg.append("path")
         .text("Money Per Day");
 });
 </script>
-    </div>
+	<div class="legend">
+	   <div class="legend"> <p class="county-name"><span class="key-dot SC"></span>PA Median Per Day Charge</p> </div>
+	   <div class="legend"> <p class="county-name"><span class="key-dot SM"></span>PA Median Per Day Medicaid Reimbursement</p></div>
+	   <div class="legend"> <p class="county-name"><span class="key-dot AC"></span>Allegheny Per Day Charge</p></div>
+	   <div class="legend"> <p class="county-name"><span class="key-dot AM"></span>Allegheny Per Day Medicaid Reimbursement</p></div>
+	   <div class="legend"> <p class="county-name"><span class="key-dot ARC"></span>Armstrong Per Day Charge</p></div>
+	   <div class="legend"> <p class="county-name"><span class="key-dot ARM"></span>Armstrong Per Day Medicaid Reimbursement</p></div>
+	   <div class="legend"> <p class="county-name"><span class="key-dot BC"></span>Butler Per Day Charge</p></div>
+	   <div class="legend"> <p class="county-name"><span class="key-dot BM"></span>Butler Per Day Medicaid Reimnbursement</p></div>
+	   <div class="legend"> <p class="county-name"><span class="key-dot WC"></span>Westmoreland Per Day Charge</p></div>
+	   <div class="legend"> <p class="county-name"><span class="key-dot WM"></span>Westmoreland Per Day Medicaid Reimnbursement</p></div>
+	</div>
 </div>
 </body>
