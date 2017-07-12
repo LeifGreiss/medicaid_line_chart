@@ -13,7 +13,8 @@
 </head>
 <body>
 <h3>Nursing Facilities: Median Per Day Charges for a Private Room Vs. Median Medicaid Reimbursement Rates</h3>
-<div id="legend">
+ <div id="Container">
+	<div id="legend">
 	   <div class="legend"> <p class="country-name"><span class="key-dot SC"></span>PA Median Per Day Charge</p> </div>
 	   <div class="legend"> <p class="country-name"><span class="key-dot SM"></span>PA Median Per Day Medicaid Reimbursement</p></div>
 	   <div class="legend"> <p class="country-name"><span class="key-dot AC"></span>Allegheny Per Day Charge</p></div>
@@ -26,6 +27,7 @@
 	   <div class="legend"> <p class="country-name"><span class="key-dot WM"></span>Westmoreland Per Day Medicaid Reimnbursement</p></div>
 	</div>
 <script src="https://d3js.org/d3.v4.min.js"></script>
+<div id="Chart">
 <script>
 // set the dimensions and margins of the graph
 var margin = {top: 20, right: 20, bottom: 30, left: 50},
@@ -189,4 +191,6 @@ svg.append("path")
         .text("Money Per Day");
 });
 </script>
+    </div>
+</div>
 </body>
