@@ -8,20 +8,20 @@ display: inline-block;
     margin: 0 !important;
 }
 #Container{
-    width: auto;
+    width: 100%;
     position: relative;
 }
 #chart{
    float: left;
-   display: inline-block;
-    /*width: 650;
+   margin: auto;
+   /*display: inline-block;
+    width: 650;
     height: 500;
     position: absolute;
     margin-right: 10px;
     padding-right: 10px;*/
 }
 .legend{
-    display: inline-block;
     /*margin-right: 20px;*/
     position: relative;
     z-index: -1;
