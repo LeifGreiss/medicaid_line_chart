@@ -19,6 +19,7 @@ display: inline-block;
 .legend{
     float: left;
     margin-right: 20px;
+    position: relative;
 }
 .SC{ background: #003C60;
 }
