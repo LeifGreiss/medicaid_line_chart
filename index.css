@@ -16,6 +16,7 @@ display: inline-block;
     width: 650;
     height: 500;
     position: absolute;
+    margin-right: 10px;
 }
 .legend{
     float: right;
