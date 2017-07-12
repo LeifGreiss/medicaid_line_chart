@@ -15,8 +15,14 @@
 <h3>Nursing Facilities: Median Per Day Charges for a Private Room Vs. Median Medicaid Reimbursement Rates</h3>
 <div id="Container">
 <script src="https://d3js.org/d3.v4.min.js"></script>
+<div id="chart">
 <div class="chart">
 <script>
+//set canvas
+var canvas = d3.select("#chart")
+	.append("svg:svg")
+	.attr("width", 650)
+        .attr("height", 500);
 // set the dimensions and margins of the graph
 var margin = {top: 20, right: 20, bottom: 30, left: 50},
     width = 650 - margin.left - margin.right,
@@ -173,6 +179,7 @@ svg.append("path")
         .text("Money Per Day");
 });
 </script>
+	</div>
 	</div>
 	<div class="legend">
 	   <div class="legend"> <p class="county-name"><span class="key-dot SC"></span>PA Median Per Day Charge</p> </div>
