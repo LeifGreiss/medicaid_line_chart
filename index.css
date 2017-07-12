@@ -21,6 +21,7 @@ display: inline-block;
     float: left;
     margin-right: 20px;
     position: relative;
+    z-index: -1;
 }
 .SC{ background: #003C60;
 }
