@@ -4,6 +4,15 @@ display: inline-block;
     margin-right: .5em;
     width: 10px;
 }
+#Container{
+    width: auto;
+    position: relative;
+}
+.chart{
+    float: left;
+    width: 650;
+    height: 500;
+}
 #legend{
     overflow:hidden;
 }
@@ -31,6 +40,4 @@ display: inline-block;
 }
 .WM{ background: #936C98;
 }
-.chart{
-    float: left;
-}
+
