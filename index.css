@@ -12,12 +12,12 @@ display: inline-block;
     position: relative;
 }
 .chart{
-    float: left;
-    width: 650;
+   float: left;
+    /*width: 650;
     height: 500;
     position: absolute;
     margin-right: 10px;
-    padding-right: 10px;
+    padding-right: 10px;*/
 }
 .legend{
     float: right;
