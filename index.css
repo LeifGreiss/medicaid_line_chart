@@ -23,7 +23,7 @@ display: inline-block;
 .legend{
     float: left;
     /*margin-right: 20px;*/
-    position: fixed;
+    position: relative;
     z-index: -1;
 }
 .SC{ background: #003C60;
