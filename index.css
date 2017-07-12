@@ -17,6 +17,7 @@ display: inline-block;
     height: 500;
 }
 .legend{
+    float: left;
     margin-right: 20px;
 }
 .SC{ background: #003C60;
