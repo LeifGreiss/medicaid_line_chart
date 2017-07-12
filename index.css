@@ -13,6 +13,7 @@ display: inline-block;
 }
 #chart{
    float: left;
+   display: inline-block;
     /*width: 650;
     height: 500;
     position: absolute;
