@@ -8,7 +8,7 @@ display: inline-block;
     overflow:hidden;
 }
 .legend{
-    float:left;
+    float:right;
     margin-right: 1em;
 }
 .SC{ background: #003C60;
@@ -31,4 +31,6 @@ display: inline-block;
 }
 .WM{ background: #936C98;
 }
-
+.chart{
+    float: left;
+}
