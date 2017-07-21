@@ -38,7 +38,9 @@ display: inline-block;
 }
 .AC{ background: #9b111e;
 }
-.AM{ background: #B11116;
+/*.AM{ background: #B11116;
+}*/
+.AM{ background: #ff4c4c;
 }
 .ARC{ background: #339933;
 }
